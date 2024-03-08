@@ -25,7 +25,7 @@ exports.getProfileByWalletAddress = async (req, res) => {
     res.status(500).send('Error retrieving profiles');
   }
 };
-
+ 
 
 exports.getAllProfiles = async (req, res) => {
   try {
