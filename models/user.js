@@ -8,7 +8,7 @@ const profileSchema = new mongoose.Schema({
   website: String,
   twitter: String,
   walletAddress: String,
-  StakingAddress: String
+  stakingAddress: String
 });
 
 module.exports = mongoose.model('Profile', profileSchema);
