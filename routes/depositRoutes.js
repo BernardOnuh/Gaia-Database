@@ -9,4 +9,7 @@ router.get('/', profileController.getAllProfiles);
 
 router.get('/:walletAddress', profileController.getProfileByWalletAddress);
 
+router.get('/profile/:stakingAddress', profileController.getProfileByStakingAddress);
+
+
 module.exports = router;

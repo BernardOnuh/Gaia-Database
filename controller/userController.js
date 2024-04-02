@@ -25,6 +25,20 @@ exports.getProfileByWalletAddress = async (req, res) => {
     res.status(500).send('Error retrieving profiles');
   }
 };
+
+exports.getProfileByStakingAddress = async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ stakingAddress: req.params.stakingAddress });
+    if (!profile) {
+      return res.status(404).send('Profile not found');
+    }
+    res.json(profile);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error retrieving profile');
+  }
+};
+
  
 
 exports.getAllProfiles = async (req, res) => {
